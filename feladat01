@@ -1,0 +1,27 @@
+keveres = new function(szinek[]){
+  let  szinekSzama = szinek.length;
+  let lehetsegesSzinszam = 0;
+  if (szinekSzama > 1) {
+    for (var i = 1; i <= szinekSzama; i++)
+    {
+      lehetsegesSzinszam += kombinacio(szinekSzama, i);
+    }
+}
+
+return lehetsegesSzinszam;
+}
+
+faktorialis(szam){
+    let eredmeny = 1;
+    for (var i = 1; i <= szam; i++) {
+        eredmeny *= i; 
+    }
+    return eredmeny;
+}
+
+//kivetelkezeléssel most nem foglalkozok
+
+kombinacio(n, k){
+  return faktorialis(n)/(faktorialis(n-k)*faktorialis(k));
+
+}
